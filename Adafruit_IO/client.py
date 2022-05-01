@@ -263,7 +263,7 @@ class Client(object):
             return all data, set to None.
         """
         if max_results is None:
-            res = self._get(f'feeds/{feed}/details')
+            res = self._get('feeds/{feed}/details')
             max_results = res['details']['data']['count']
         if data_id:
             path = "feeds/{0}/data/{1}".format(feed, data_id)
